@@ -17,4 +17,4 @@ Al clonar el proyecto se debe agregar a cron las siguientes lineas:
 
 
 @reboot /usr/bin/python3 /home/alumno/hosts/update_service.py
-*/5 * * * * /user/bin/python3 /home/alumno/hosts/update_service.py
+*/5 * * * * /usr/bin/python3 /home/alumno/hosts/update_service.py
