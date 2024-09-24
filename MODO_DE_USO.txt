@@ -1,0 +1,16 @@
+Al clonar el proyecto se debe agregar a cron las siguientes lineas:
+
+#PARA QUE SE EJECUTE AL BOOTEAR:
+#@reboot path-programa path-ejecutable
+@reboot /usr/bin/python3 /home/alumno/hosts/update.service.py
+
+#configuracion automatizacion
+# *(minutos 0-59) *(horas 0-23) *(dia del mes 1-31) *(mes 1-12) *(dia de semana(0-7 donde 0 y 7 son domingo) path-ejecutable
+# Utilizar "*/" antes del valor, indica que se repite cada esa cantidad de tiempo
+#  Ejemplo */5 * * * * ---> cada 5 minutos
+#  Ejemplo 0 8 7,21 * * ---> los dias 7 y 21 a las 8.00
+
+*/5 * * * /user/bin/python3 /home/alumno/hosts/update.service.py
+
+
+#Se debe dar permisos de ejecucion a los programas necesarios y de administrador. (Averiguar)
